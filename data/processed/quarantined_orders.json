@@ -1,0 +1,173 @@
+[
+  {
+    "raw_record": {
+      "order_id": "de317cc2-fc9e-4459-8a14-d6a5fec270e9",
+      "customer_id": 1051,
+      "customer_email": "ramirezerica@example.com",
+      "amount": -25.5,
+      "status": "Canceled",
+      "order_timestamp": "2026-02-19T15:22:05"
+    },
+    "errors": [
+      {
+        "loc": [
+          "amount"
+        ],
+        "msg": "Input should be greater than or equal to 0",
+        "type": "greater_than_equal"
+      }
+    ]
+  },
+  {
+    "raw_record": {
+      "order_id": "6e1d5011-80f1-4f66-a88a-a75524f93b70",
+      "customer_id": 1045,
+      "customer_email": "michelletanner@example.org",
+      "amount": -25.5,
+      "status": "Refused",
+      "order_timestamp": "2026-05-04T15:06:36"
+    },
+    "errors": [
+      {
+        "loc": [
+          "amount"
+        ],
+        "msg": "Input should be greater than or equal to 0",
+        "type": "greater_than_equal"
+      }
+    ]
+  },
+  {
+    "raw_record": {
+      "order_id": "00a6c864-b648-4942-80d4-9eeff3e35083",
+      "customer_id": 1031,
+      "customer_email": "erin12@example.org",
+      "amount": -25.5,
+      "status": null,
+      "order_timestamp": "2026-01-10T11:15:37"
+    },
+    "errors": [
+      {
+        "loc": [
+          "amount"
+        ],
+        "msg": "Input should be greater than or equal to 0",
+        "type": "greater_than_equal"
+      }
+    ]
+  },
+  {
+    "raw_record": {
+      "order_id": "b4a9d81b-f9f4-4cea-a3de-1a4f01ab9104",
+      "customer_id": 1038,
+      "customer_email": "uclay@example.org",
+      "amount": -25.5,
+      "status": "Completed",
+      "order_timestamp": "2026-07-05T02:37:28"
+    },
+    "errors": [
+      {
+        "loc": [
+          "amount"
+        ],
+        "msg": "Input should be greater than or equal to 0",
+        "type": "greater_than_equal"
+      }
+    ]
+  },
+  {
+    "raw_record": {
+      "order_id": "c3b42dc2-3674-4943-8faa-50a310cb3f94",
+      "customer_id": 1040,
+      "customer_email": "ngomez@example.com",
+      "amount": -25.5,
+      "status": "Refused",
+      "order_timestamp": "2026-08-24T23:46:29"
+    },
+    "errors": [
+      {
+        "loc": [
+          "amount"
+        ],
+        "msg": "Input should be greater than or equal to 0",
+        "type": "greater_than_equal"
+      }
+    ]
+  },
+  {
+    "raw_record": {
+      "order_id": "7df95b65-e685-4fee-af70-9250db1f54c9",
+      "customer_id": 1018,
+      "customer_email": " BCAMACHO@EXAMPLE.NET",
+      "amount": -25.5,
+      "status": null,
+      "order_timestamp": "2026-02-21T00:37:08"
+    },
+    "errors": [
+      {
+        "loc": [
+          "amount"
+        ],
+        "msg": "Input should be greater than or equal to 0",
+        "type": "greater_than_equal"
+      }
+    ]
+  },
+  {
+    "raw_record": {
+      "order_id": "9f1d76ae-076a-4ca6-b03b-d998470dd43b",
+      "customer_id": 1060,
+      "customer_email": "richmargaret@example.org",
+      "amount": -25.5,
+      "status": "Refused",
+      "order_timestamp": "2026-03-24T00:00:34"
+    },
+    "errors": [
+      {
+        "loc": [
+          "amount"
+        ],
+        "msg": "Input should be greater than or equal to 0",
+        "type": "greater_than_equal"
+      }
+    ]
+  },
+  {
+    "raw_record": {
+      "order_id": "a38ea2cb-c8e0-48bf-a721-b825fecfa801",
+      "customer_id": 1009,
+      "customer_email": "melissagross@example.com",
+      "amount": -25.5,
+      "status": "Canceled",
+      "order_timestamp": "2026-01-18T22:21:00"
+    },
+    "errors": [
+      {
+        "loc": [
+          "amount"
+        ],
+        "msg": "Input should be greater than or equal to 0",
+        "type": "greater_than_equal"
+      }
+    ]
+  },
+  {
+    "raw_record": {
+      "order_id": "3a99a2f5-5df4-4a73-bf54-7a0c8931c501",
+      "customer_id": 1012,
+      "customer_email": "fduran@example.net",
+      "amount": -25.5,
+      "status": "Completed",
+      "order_timestamp": "2026-07-04T11:59:11"
+    },
+    "errors": [
+      {
+        "loc": [
+          "amount"
+        ],
+        "msg": "Input should be greater than or equal to 0",
+        "type": "greater_than_equal"
+      }
+    ]
+  }
+]

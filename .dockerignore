@@ -1,0 +1,8 @@
+# Create .dockerignore in your root directory
+__pycache__
+*.pyc
+.venv
+.git
+.gitignore
+.vscode
+data/*

@@ -1,0 +1,1602 @@
+[
+  {
+    "order_id": "bd5989f4-588d-43e5-a5ee-15bb1699db78",
+    "customer_id": 1079,
+    "customer_email": "donnaadams@example.net",
+    "amount": 787.19,
+    "status": "Canceled",
+    "order_timestamp": "2026-05-11T00:45:29"
+  },
+  {
+    "order_id": "96b84f1e-4af1-43ae-86c5-4c41d63499c1",
+    "customer_id": 1073,
+    "customer_email": "amber87@example.org",
+    "amount": 1002.74,
+    "status": "Canceled",
+    "order_timestamp": "2026-02-06T11:10:24"
+  },
+  {
+    "order_id": "0f676c20-b779-4cea-b68a-01d73c5f961e",
+    "customer_id": 1033,
+    "customer_email": "ggarza@example.net",
+    "amount": 923.48,
+    "status": null,
+    "order_timestamp": "2026-08-26T08:53:42"
+  },
+  {
+    "order_id": "6595fd4b-18c8-4228-94f5-874e27a53c32",
+    "customer_id": 1037,
+    "customer_email": "ericarose@example.com",
+    "amount": 332.35,
+    "status": "Refused",
+    "order_timestamp": "2026-01-22T02:41:31"
+  },
+  {
+    "order_id": "f8b489ee-0ee8-4dc5-b387-f9dd84bbac1e",
+    "customer_id": 1022,
+    "customer_email": "stephanie98@example.com",
+    "amount": 155.83,
+    "status": "Completed",
+    "order_timestamp": "2026-05-09T04:42:31"
+  },
+  {
+    "order_id": "5ba7ca16-c2ba-4015-af26-b92fab822848",
+    "customer_id": 1011,
+    "customer_email": "simpsongregory@example.org",
+    "amount": 351.57,
+    "status": "Refused",
+    "order_timestamp": "2026-05-02T23:27:01"
+  },
+  {
+    "order_id": "8f6300ae-2df1-412f-bdf0-1f9b6f9ea23a",
+    "customer_id": 1038,
+    "customer_email": "gonzalezjessica@example.org",
+    "amount": 866.3,
+    "status": "Canceled",
+    "order_timestamp": "2026-01-27T19:30:39"
+  },
+  {
+    "order_id": "d22cb18e-9df5-484f-9f5a-b55dd0a2de4e",
+    "customer_id": 1045,
+    "customer_email": "ruben11@example.net",
+    "amount": 122.93,
+    "status": "Refused",
+    "order_timestamp": "2026-02-14T16:18:20"
+  },
+  {
+    "order_id": "6334c3bc-1f40-4431-a706-6446c86f950b",
+    "customer_id": 1041,
+    "customer_email": "jessicadaniels@example.net",
+    "amount": 256.27,
+    "status": null,
+    "order_timestamp": "2026-08-12T07:56:50"
+  },
+  {
+    "order_id": "54bde72b-dd98-4cee-a939-be74bbc44851",
+    "customer_id": 1018,
+    "customer_email": "schmidtjason@example.org",
+    "amount": 161.68,
+    "status": "Pending",
+    "order_timestamp": "2026-05-06T05:14:46"
+  },
+  {
+    "order_id": "e7c84320-2d35-4507-a002-6eeda4647c98",
+    "customer_id": 1054,
+    "customer_email": "danielle11@example.org",
+    "amount": 252.09,
+    "status": "Completed",
+    "order_timestamp": "2026-01-20T13:58:24"
+  },
+  {
+    "order_id": "98791b9f-1e3b-4246-852c-fa478d7d342d",
+    "customer_id": 1009,
+    "customer_email": " ALVAREZJEFFREY@EXAMPLE.NET",
+    "amount": 431.59,
+    "status": "Canceled",
+    "order_timestamp": "2026-06-08T04:31:03"
+  },
+  {
+    "order_id": "17bcfbc2-3435-4d3f-8237-67c902dd0d5d",
+    "customer_id": 1007,
+    "customer_email": "truiz@example.org",
+    "amount": 551.02,
+    "status": "Refused",
+    "order_timestamp": "2026-07-13T08:41:15"
+  },
+  {
+    "order_id": "4da193d3-244a-4c6f-a3cb-7471ceda57f5",
+    "customer_id": 1077,
+    "customer_email": " JOHN61@EXAMPLE.ORG",
+    "amount": 13.51,
+    "status": "Refused",
+    "order_timestamp": "2026-05-21T07:33:10"
+  },
+  {
+    "order_id": "08923413-4e19-44ed-b6c2-f5a534eb5693",
+    "customer_id": 1066,
+    "customer_email": "holtbryan@example.com",
+    "amount": 378.29,
+    "status": "Completed",
+    "order_timestamp": "2026-05-22T11:30:16"
+  },
+  {
+    "order_id": "dd2896ac-2a7f-4909-a609-d940807a964f",
+    "customer_id": 1024,
+    "customer_email": "millerjennifer@example.net",
+    "amount": 666.15,
+    "status": "Pending",
+    "order_timestamp": "2026-06-06T10:39:49"
+  },
+  {
+    "order_id": "23381ffc-512a-42ba-9d07-e723d337264b",
+    "customer_id": 1008,
+    "customer_email": "bethanynelson@example.com",
+    "amount": 1164.46,
+    "status": "Pending",
+    "order_timestamp": "2026-03-24T14:27:58"
+  },
+  {
+    "order_id": "5543140b-eaaa-4d44-903b-d34f4d6f6845",
+    "customer_id": 1049,
+    "customer_email": "xnash@example.com",
+    "amount": 672.34,
+    "status": "Refused",
+    "order_timestamp": "2026-04-28T23:36:06"
+  },
+  {
+    "order_id": "c80e50c6-6999-4f56-81f1-4572dca490aa",
+    "customer_id": 1009,
+    "customer_email": "judy15@example.net",
+    "amount": 164.67,
+    "status": null,
+    "order_timestamp": "2026-03-17T05:56:32"
+  },
+  {
+    "order_id": "cc268a23-b8cc-4ce2-b4f2-4c7520c03cf1",
+    "customer_id": 1059,
+    "customer_email": "patricia53@example.org",
+    "amount": 1138.41,
+    "status": "Completed",
+    "order_timestamp": "2026-08-20T08:29:37"
+  },
+  {
+    "order_id": "faa31142-480c-4a46-a5a5-95c536ee1055",
+    "customer_id": 1032,
+    "customer_email": "elizabeth39@example.net",
+    "amount": 1072.21,
+    "status": "Completed",
+    "order_timestamp": "2026-04-09T04:02:51"
+  },
+  {
+    "order_id": "d7ce1198-c0ab-41a6-bd7c-357606132178",
+    "customer_id": 1079,
+    "customer_email": " BETHANY33@EXAMPLE.COM",
+    "amount": 843.33,
+    "status": null,
+    "order_timestamp": "2026-04-29T05:16:16"
+  },
+  {
+    "order_id": "fe57abfe-3834-4d4b-b201-c1a86a910ea0",
+    "customer_id": 1009,
+    "customer_email": "michaelwallace@example.com",
+    "amount": 576.96,
+    "status": "Canceled",
+    "order_timestamp": "2026-05-02T20:50:20"
+  },
+  {
+    "order_id": "f54101bc-557d-4ef2-9c22-3acbbfa7b0fb",
+    "customer_id": 1031,
+    "customer_email": "fuentesshawn@example.net",
+    "amount": 1148.08,
+    "status": "Completed",
+    "order_timestamp": "2026-01-20T18:18:33"
+  },
+  {
+    "order_id": "c7736b40-c01d-47ea-b6bf-a7658ae227a7",
+    "customer_id": 1025,
+    "customer_email": "chavezguy@example.com",
+    "amount": 482.87,
+    "status": null,
+    "order_timestamp": "2026-01-23T07:46:28"
+  },
+  {
+    "order_id": "cb2b938a-e4d7-46c0-90bf-4d4d291947bd",
+    "customer_id": 1014,
+    "customer_email": "ricejames@example.net",
+    "amount": 1088.96,
+    "status": "Completed",
+    "order_timestamp": "2026-04-30T21:21:13"
+  },
+  {
+    "order_id": "499cba0e-d815-4ee5-a9bb-604f6d7596b3",
+    "customer_id": 1048,
+    "customer_email": "thomasscott@example.org",
+    "amount": 1152.52,
+    "status": "Completed",
+    "order_timestamp": "2026-05-17T23:36:43"
+  },
+  {
+    "order_id": "a799cd40-38f1-41ee-a9ad-1765bb993d04",
+    "customer_id": 1061,
+    "customer_email": "stevensmith@example.org",
+    "amount": 168.07,
+    "status": "Completed",
+    "order_timestamp": "2026-04-05T07:00:14"
+  },
+  {
+    "order_id": "8310cce3-3786-41b2-a064-f41c9b589d85",
+    "customer_id": 1015,
+    "customer_email": "johnsonlinda@example.org",
+    "amount": 355.12,
+    "status": "Pending",
+    "order_timestamp": "2026-08-01T20:34:20"
+  },
+  {
+    "order_id": "62b407cd-038f-46e7-8d65-632417314535",
+    "customer_id": 1024,
+    "customer_email": "bartondavid@example.org",
+    "amount": 226.84,
+    "status": "Completed",
+    "order_timestamp": "2026-02-28T07:07:39"
+  },
+  {
+    "order_id": "e0f06402-b833-4ec7-854e-1cc57d909b77",
+    "customer_id": 1069,
+    "customer_email": "jonathangomez@example.com",
+    "amount": 197.14,
+    "status": null,
+    "order_timestamp": "2026-07-15T17:57:02"
+  },
+  {
+    "order_id": "12d07054-67b5-4b72-9498-206f9171e1c8",
+    "customer_id": 1034,
+    "customer_email": "ashlee16@example.net",
+    "amount": 589.31,
+    "status": null,
+    "order_timestamp": "2026-05-11T08:37:16"
+  },
+  {
+    "order_id": "9de59fc3-f8eb-4aa5-9536-bd494a6deb1e",
+    "customer_id": 1020,
+    "customer_email": "mnelson@example.org",
+    "amount": 820.88,
+    "status": "Pending",
+    "order_timestamp": "2026-05-01T06:39:22"
+  },
+  {
+    "order_id": "11681476-4502-4a90-ab60-84500fa7a36f",
+    "customer_id": 1052,
+    "customer_email": "mark38@example.com",
+    "amount": 879.26,
+    "status": null,
+    "order_timestamp": "2026-02-23T07:52:37"
+  },
+  {
+    "order_id": "9d14180e-5a48-42dc-943d-be7763b52412",
+    "customer_id": 1070,
+    "customer_email": "hogantimothy@example.com",
+    "amount": 1118.09,
+    "status": "Canceled",
+    "order_timestamp": "2026-04-05T20:44:55"
+  },
+  {
+    "order_id": "356595fe-25a7-42f7-ba30-2fe415859088",
+    "customer_id": 1074,
+    "customer_email": "leedonald@example.com",
+    "amount": 913.32,
+    "status": "Canceled",
+    "order_timestamp": "2026-06-13T20:54:27"
+  },
+  {
+    "order_id": "c5a51ec6-6882-4c47-86e0-222dd6ef8c3f",
+    "customer_id": 1066,
+    "customer_email": "snyderemily@example.org",
+    "amount": 1147.92,
+    "status": null,
+    "order_timestamp": "2026-05-29T01:35:18"
+  },
+  {
+    "order_id": "572926c0-abc8-4f13-808d-40d7d43b7835",
+    "customer_id": 1074,
+    "customer_email": "jennifer13@example.org",
+    "amount": 1058.94,
+    "status": "Refused",
+    "order_timestamp": "2026-07-22T00:03:23"
+  },
+  {
+    "order_id": "f916c66c-3989-48ad-8710-0734c5e3668c",
+    "customer_id": 1032,
+    "customer_email": "jeffreystevenson@example.com",
+    "amount": 104.13,
+    "status": "Completed",
+    "order_timestamp": "2026-04-24T17:36:30"
+  },
+  {
+    "order_id": "feabc359-d524-4ee8-8f9e-9811dffd757c",
+    "customer_id": 1020,
+    "customer_email": "clevine@example.net",
+    "amount": 263.5,
+    "status": "Refused",
+    "order_timestamp": "2026-02-19T13:27:00"
+  },
+  {
+    "order_id": "399908ee-9824-4ea2-8d05-30df8c1d181c",
+    "customer_id": 1080,
+    "customer_email": "fnovak@example.com",
+    "amount": 950.78,
+    "status": "Pending",
+    "order_timestamp": "2026-06-23T11:00:05"
+  },
+  {
+    "order_id": "c2c152a0-8c3f-4a60-bc63-80ef54158288",
+    "customer_id": 1012,
+    "customer_email": "amanda13@example.com",
+    "amount": 236.92,
+    "status": "Completed",
+    "order_timestamp": "2026-01-20T14:37:23"
+  },
+  {
+    "order_id": "2d49c1b3-bde1-4986-8685-b4864c023038",
+    "customer_id": 1073,
+    "customer_email": "jonathanwells@example.org",
+    "amount": 989.35,
+    "status": "Canceled",
+    "order_timestamp": "2026-05-06T17:47:18"
+  },
+  {
+    "order_id": "a426bf1c-3904-4518-a4e4-6365cf308b6d",
+    "customer_id": 1050,
+    "customer_email": "greenewilliam@example.org",
+    "amount": 419.35,
+    "status": "Refused",
+    "order_timestamp": "2026-02-23T01:24:39"
+  },
+  {
+    "order_id": "bee880d1-1cd6-49e9-bfe1-8a69863bdd3a",
+    "customer_id": 1024,
+    "customer_email": "joshua25@example.net",
+    "amount": 675.71,
+    "status": "Completed",
+    "order_timestamp": "2026-08-12T18:29:13"
+  },
+  {
+    "order_id": "2baf9431-5183-4a02-9563-c516a431b10c",
+    "customer_id": 1010,
+    "customer_email": "fmurray@example.net",
+    "amount": 1017.86,
+    "status": null,
+    "order_timestamp": "2026-08-12T06:51:43"
+  },
+  {
+    "order_id": "3695a15c-3455-4bab-8013-2642cfc5e458",
+    "customer_id": 1017,
+    "customer_email": "garciakevin@example.net",
+    "amount": 27.05,
+    "status": "Completed",
+    "order_timestamp": "2026-02-01T04:07:33"
+  },
+  {
+    "order_id": "8fbce0e0-de40-47ff-9e2e-4db5c9d57bf0",
+    "customer_id": 1013,
+    "customer_email": "xbrandt@example.org",
+    "amount": 126.16,
+    "status": null,
+    "order_timestamp": "2026-07-26T18:20:59"
+  },
+  {
+    "order_id": "0a09c7ab-15ee-4fac-8a1d-88c22104f968",
+    "customer_id": 1071,
+    "customer_email": "michael38@example.net",
+    "amount": 772.77,
+    "status": "Refused",
+    "order_timestamp": "2026-08-28T07:50:09"
+  },
+  {
+    "order_id": "11956747-250b-4de5-b515-b496db05783b",
+    "customer_id": 1035,
+    "customer_email": "justin20@example.com",
+    "amount": 660.05,
+    "status": "Canceled",
+    "order_timestamp": "2026-03-14T01:26:41"
+  },
+  {
+    "order_id": "85d724c9-a200-47e2-8794-de657688bab7",
+    "customer_id": 1060,
+    "customer_email": "gparsons@example.net",
+    "amount": 661.86,
+    "status": "Completed",
+    "order_timestamp": "2026-04-17T14:23:12"
+  },
+  {
+    "order_id": "0a93f6c2-a14b-4b91-9690-f36d80bc697f",
+    "customer_id": 1014,
+    "customer_email": " RONALD32@EXAMPLE.NET",
+    "amount": 1098.07,
+    "status": null,
+    "order_timestamp": "2026-06-08T22:50:03"
+  },
+  {
+    "order_id": "b268ddd0-8a3c-465c-bb98-aa85bc576d35",
+    "customer_id": 1042,
+    "customer_email": "robert75@example.org",
+    "amount": 625.8,
+    "status": "Canceled",
+    "order_timestamp": "2026-06-06T10:30:35"
+  },
+  {
+    "order_id": "b67075fe-6fe5-4a91-af9e-84b69a76da66",
+    "customer_id": 1026,
+    "customer_email": "kimberlysmith@example.net",
+    "amount": 724.16,
+    "status": "Completed",
+    "order_timestamp": "2026-03-06T09:39:51"
+  },
+  {
+    "order_id": "1f040aaf-a676-4a92-b36c-8793f27c48b7",
+    "customer_id": 1067,
+    "customer_email": "caserobert@example.net",
+    "amount": -25.5,
+    "status": "Canceled",
+    "order_timestamp": "2026-03-07T07:57:18"
+  },
+  {
+    "order_id": "625638c3-50ce-4aa3-ad0d-bc2efeddaea9",
+    "customer_id": 1002,
+    "customer_email": "fsimon@example.net",
+    "amount": 793.35,
+    "status": "Refused",
+    "order_timestamp": "2026-01-07T06:58:42"
+  },
+  {
+    "order_id": "9407c510-8bdc-4e0a-9565-5da231096c63",
+    "customer_id": 1045,
+    "customer_email": "denise75@example.org",
+    "amount": 1096.77,
+    "status": null,
+    "order_timestamp": "2026-02-23T11:31:01"
+  },
+  {
+    "order_id": "3b0c8fa1-ea13-4ef2-b384-5f5308199d8e",
+    "customer_id": 1009,
+    "customer_email": "gwaters@example.org",
+    "amount": 149.63,
+    "status": "Pending",
+    "order_timestamp": "2026-08-30T03:48:37"
+  },
+  {
+    "order_id": "fd06b02b-4f6c-4511-aeff-fd7a420b08eb",
+    "customer_id": 1080,
+    "customer_email": "evansricky@example.org",
+    "amount": 347.72,
+    "status": "Completed",
+    "order_timestamp": "2026-07-15T23:11:14"
+  },
+  {
+    "order_id": "98faefcd-e399-4cce-95a7-3531bd851dc0",
+    "customer_id": 1020,
+    "customer_email": " AMOORE@EXAMPLE.NET",
+    "amount": 879.41,
+    "status": "Canceled",
+    "order_timestamp": "2026-06-15T11:28:54"
+  },
+  {
+    "order_id": "c6e20429-2e8f-416d-aa86-4d57f9c6694b",
+    "customer_id": 1078,
+    "customer_email": "bakerjason@example.com",
+    "amount": 170.48,
+    "status": "Canceled",
+    "order_timestamp": "2026-03-23T08:34:24"
+  },
+  {
+    "order_id": "7d24d357-1dac-4116-9e19-0141d1fde353",
+    "customer_id": 1002,
+    "customer_email": "kimjason@example.net",
+    "amount": 941.19,
+    "status": "Refused",
+    "order_timestamp": "2026-01-12T02:24:17"
+  },
+  {
+    "order_id": "bde9c400-9226-40ae-8519-b4d6c97636a9",
+    "customer_id": 1070,
+    "customer_email": "michaelprice@example.org",
+    "amount": 691.49,
+    "status": "Completed",
+    "order_timestamp": "2026-02-03T06:31:16"
+  },
+  {
+    "order_id": "cb6554ef-2ff2-4fd1-99a9-6be557f69959",
+    "customer_id": 1021,
+    "customer_email": "briannajones@example.com",
+    "amount": 1192.28,
+    "status": null,
+    "order_timestamp": "2026-04-07T08:04:54"
+  },
+  {
+    "order_id": "b7b5fad3-f9de-4a55-8e67-2a5080b002f2",
+    "customer_id": 1008,
+    "customer_email": "shane70@example.org",
+    "amount": 770.82,
+    "status": "Refused",
+    "order_timestamp": "2026-07-18T16:38:01"
+  },
+  {
+    "order_id": "c9287f79-4ccb-48ea-b68d-cff5d7d93340",
+    "customer_id": 1011,
+    "customer_email": " MATTHEW36@EXAMPLE.NET",
+    "amount": 738.48,
+    "status": null,
+    "order_timestamp": "2026-07-20T06:18:05"
+  },
+  {
+    "order_id": "2985085f-a058-4d66-8adc-16ff4bf973a3",
+    "customer_id": 1011,
+    "customer_email": "kmorton@example.org",
+    "amount": 135.06,
+    "status": "Completed",
+    "order_timestamp": "2026-06-03T17:30:07"
+  },
+  {
+    "order_id": "a0e139eb-0128-4ff3-a512-233a657d68d8",
+    "customer_id": 1052,
+    "customer_email": "baxtertyler@example.org",
+    "amount": -25.5,
+    "status": "Pending",
+    "order_timestamp": "2026-01-24T14:11:05"
+  },
+  {
+    "order_id": "2af2b431-fb42-4180-884d-95cf783f6408",
+    "customer_id": 1055,
+    "customer_email": "sarahmitchell@example.com",
+    "amount": 127.43,
+    "status": "Pending",
+    "order_timestamp": "2026-06-08T06:43:49"
+  },
+  {
+    "order_id": "e7fd001c-c829-4fb8-b2b3-6e390f915bac",
+    "customer_id": 1027,
+    "customer_email": " PRESTONRANDOLPH@EXAMPLE.COM",
+    "amount": 988.13,
+    "status": "Canceled",
+    "order_timestamp": "2026-07-11T14:46:38"
+  },
+  {
+    "order_id": "88652309-85a7-42ea-9f90-926e8720b0df",
+    "customer_id": 1051,
+    "customer_email": "schwartzangelica@example.com",
+    "amount": 295.58,
+    "status": null,
+    "order_timestamp": "2026-06-08T22:01:12"
+  },
+  {
+    "order_id": "0b0375db-b08f-4222-8eab-65feabea46d6",
+    "customer_id": 1041,
+    "customer_email": "cooperdale@example.net",
+    "amount": 781.49,
+    "status": "Refused",
+    "order_timestamp": "2026-02-09T17:10:38"
+  },
+  {
+    "order_id": "a4b00852-2c9d-4afa-98df-98788bbf73d9",
+    "customer_id": 1017,
+    "customer_email": "hannah94@example.org",
+    "amount": 653.05,
+    "status": null,
+    "order_timestamp": "2026-02-09T21:21:18"
+  },
+  {
+    "order_id": "28aeb790-fb5b-4153-919a-3ca19362468f",
+    "customer_id": 1074,
+    "customer_email": "william79@example.org",
+    "amount": 126.86,
+    "status": "Canceled",
+    "order_timestamp": "2026-01-30T20:33:58"
+  },
+  {
+    "order_id": "9f033012-ded7-462f-9540-a75d6b930e93",
+    "customer_id": 1037,
+    "customer_email": "aowen@example.net",
+    "amount": 711.91,
+    "status": "Refused",
+    "order_timestamp": "2026-03-12T15:42:49"
+  },
+  {
+    "order_id": "042e236c-fbec-4211-9542-8ca99b1a2a18",
+    "customer_id": 1013,
+    "customer_email": " COOLEYBRUCE@EXAMPLE.NET",
+    "amount": 573.95,
+    "status": "Pending",
+    "order_timestamp": "2026-05-10T00:25:25"
+  },
+  {
+    "order_id": "0c1e7c10-2e8e-47d0-8a3c-5355ad974186",
+    "customer_id": 1060,
+    "customer_email": "ethanstevens@example.com",
+    "amount": 931.66,
+    "status": "Refused",
+    "order_timestamp": "2026-07-24T00:37:37"
+  },
+  {
+    "order_id": "47053a78-2dd7-4319-b3e4-fe80b1feeb78",
+    "customer_id": 1048,
+    "customer_email": "rogersamber@example.com",
+    "amount": 154.85,
+    "status": "Refused",
+    "order_timestamp": "2026-01-23T23:15:35"
+  },
+  {
+    "order_id": "f3338ac2-aa48-4f42-af72-b9a85e4d531e",
+    "customer_id": 1038,
+    "customer_email": "odavis@example.org",
+    "amount": 908.87,
+    "status": "Refused",
+    "order_timestamp": "2026-05-24T05:02:36"
+  },
+  {
+    "order_id": "bbfa8b71-0cd0-4fd3-8e55-f9d21b8df809",
+    "customer_id": 1004,
+    "customer_email": "mario92@example.com",
+    "amount": 1006.49,
+    "status": "Completed",
+    "order_timestamp": "2026-01-16T07:00:10"
+  },
+  {
+    "order_id": "59503f70-1be5-4042-8fae-f35491f08002",
+    "customer_id": 1006,
+    "customer_email": "zanderson@example.org",
+    "amount": 623.08,
+    "status": "Canceled",
+    "order_timestamp": "2026-06-12T11:33:59"
+  },
+  {
+    "order_id": "4ca9b1b9-20f5-4cc4-abc8-bc3dbdf75a62",
+    "customer_id": 1072,
+    "customer_email": " CHRISTINECASTRO@EXAMPLE.COM",
+    "amount": 290.8,
+    "status": null,
+    "order_timestamp": "2026-03-01T22:56:58"
+  },
+  {
+    "order_id": "2217c93f-c8fe-4ffe-a030-4debe77b8919",
+    "customer_id": 1017,
+    "customer_email": " ALEXANDRA54@EXAMPLE.COM",
+    "amount": 407.64,
+    "status": "Canceled",
+    "order_timestamp": "2026-08-29T19:56:48"
+  },
+  {
+    "order_id": "33c3a500-9508-404b-866f-5a1be43696a8",
+    "customer_id": 1041,
+    "customer_email": "mary75@example.org",
+    "amount": 1069.36,
+    "status": "Canceled",
+    "order_timestamp": "2026-03-30T02:15:26"
+  },
+  {
+    "order_id": "31c964a3-cf89-4814-9334-23fcb84d713a",
+    "customer_id": 1047,
+    "customer_email": "ppeterson@example.org",
+    "amount": 1005.57,
+    "status": "Pending",
+    "order_timestamp": "2026-03-08T21:19:49"
+  },
+  {
+    "order_id": "c9baa003-e881-45f5-811d-177528f7c432",
+    "customer_id": 1008,
+    "customer_email": "ccarter@example.org",
+    "amount": 1124.93,
+    "status": "Pending",
+    "order_timestamp": "2026-07-26T15:18:02"
+  },
+  {
+    "order_id": "1ee46552-30b0-4e83-a446-5ac6b59fd619",
+    "customer_id": 1075,
+    "customer_email": " DTRAVIS@EXAMPLE.COM",
+    "amount": -25.5,
+    "status": "Pending",
+    "order_timestamp": "2026-06-23T10:13:19"
+  },
+  {
+    "order_id": "bcaa86ab-d4f7-4ae8-9e50-e28c5333b0d3",
+    "customer_id": 1046,
+    "customer_email": "hudsonadam@example.org",
+    "amount": 798.25,
+    "status": "Refused",
+    "order_timestamp": "2026-08-22T14:55:31"
+  },
+  {
+    "order_id": "38595f8a-65fa-431a-a8d6-c1e75075ef55",
+    "customer_id": 1004,
+    "customer_email": "usanders@example.com",
+    "amount": 27.46,
+    "status": "Pending",
+    "order_timestamp": "2026-02-19T23:37:56"
+  },
+  {
+    "order_id": "1809be20-f210-4fef-b5f8-8b38cc7905fe",
+    "customer_id": 1011,
+    "customer_email": "laurafischer@example.com",
+    "amount": 932.62,
+    "status": null,
+    "order_timestamp": "2026-06-29T23:08:46"
+  },
+  {
+    "order_id": "0737a295-b263-47e6-8314-c3e9e58d9132",
+    "customer_id": 1056,
+    "customer_email": " MARSHKYLE@EXAMPLE.ORG",
+    "amount": 28.38,
+    "status": "Refused",
+    "order_timestamp": "2026-03-29T20:09:57"
+  },
+  {
+    "order_id": "79a6ff49-92c8-4081-a4dd-d0470466ed8c",
+    "customer_id": 1076,
+    "customer_email": "gonzalesrobert@example.net",
+    "amount": 1106.45,
+    "status": null,
+    "order_timestamp": "2026-01-14T23:36:34"
+  },
+  {
+    "order_id": "d83efa85-c97c-4315-8ad7-80f4b43861ec",
+    "customer_id": 1016,
+    "customer_email": "christophermoore@example.org",
+    "amount": 852.11,
+    "status": "Canceled",
+    "order_timestamp": "2026-05-21T23:11:11"
+  },
+  {
+    "order_id": "2f14eb52-c252-4abb-8610-cf3df19e77f6",
+    "customer_id": 1025,
+    "customer_email": "mhamilton@example.net",
+    "amount": 730.44,
+    "status": "Refused",
+    "order_timestamp": "2026-02-03T11:06:00"
+  },
+  {
+    "order_id": "691ce3a2-0927-46e1-ac35-173d54afe861",
+    "customer_id": 1027,
+    "customer_email": "nmurphy@example.net",
+    "amount": -25.5,
+    "status": "Pending",
+    "order_timestamp": "2026-03-13T13:38:23"
+  },
+  {
+    "order_id": "67d0aca7-4556-4e65-aa5b-29e38c499783",
+    "customer_id": 1001,
+    "customer_email": "imccoy@example.net",
+    "amount": 277.43,
+    "status": null,
+    "order_timestamp": "2026-01-17T14:34:58"
+  },
+  {
+    "order_id": "0fc33ba1-304b-4728-99fd-dcb4f510d3b3",
+    "customer_id": 1071,
+    "customer_email": "kimberly63@example.net",
+    "amount": 270.87,
+    "status": "Refused",
+    "order_timestamp": "2026-07-08T04:19:16"
+  },
+  {
+    "order_id": "da65f18e-571b-45d0-bdc4-19aebbddc9ba",
+    "customer_id": 1046,
+    "customer_email": "dawnscott@example.com",
+    "amount": 953.69,
+    "status": "Completed",
+    "order_timestamp": "2026-01-10T16:41:10"
+  },
+  {
+    "order_id": "e0f18023-f3fb-4221-84cc-29059b692c03",
+    "customer_id": 1078,
+    "customer_email": "david49@example.org",
+    "amount": 178.25,
+    "status": "Pending",
+    "order_timestamp": "2026-01-23T14:09:03"
+  },
+  {
+    "order_id": "250e33d8-7eb9-4d0d-bfd6-f6649628435e",
+    "customer_id": 1051,
+    "customer_email": "mooremichael@example.org",
+    "amount": 988.09,
+    "status": "Pending",
+    "order_timestamp": "2026-02-25T10:00:04"
+  },
+  {
+    "order_id": "ae949b01-04f4-4284-bc96-97025b8ec175",
+    "customer_id": 1063,
+    "customer_email": "garzaevan@example.org",
+    "amount": 178.35,
+    "status": null,
+    "order_timestamp": "2026-03-19T14:44:15"
+  },
+  {
+    "order_id": "769ad842-9843-41a5-86c2-865270546654",
+    "customer_id": 1038,
+    "customer_email": "christinebarajas@example.com",
+    "amount": 217.89,
+    "status": null,
+    "order_timestamp": "2026-05-20T14:05:26"
+  },
+  {
+    "order_id": "90d40070-f02d-4c17-8102-45af32070984",
+    "customer_id": 1057,
+    "customer_email": "john79@example.com",
+    "amount": 938.51,
+    "status": "Canceled",
+    "order_timestamp": "2026-04-14T20:56:27"
+  },
+  {
+    "order_id": "9da93486-f6fb-410a-aff0-48d1d73b16bf",
+    "customer_id": 1021,
+    "customer_email": "michaelclark@example.org",
+    "amount": 632.76,
+    "status": null,
+    "order_timestamp": "2026-03-18T17:37:06"
+  },
+  {
+    "order_id": "7a8ad09c-276b-4e49-a05f-48ebde6b9d8c",
+    "customer_id": 1025,
+    "customer_email": "jeffrey45@example.org",
+    "amount": 275.22,
+    "status": "Completed",
+    "order_timestamp": "2026-01-30T15:15:54"
+  },
+  {
+    "order_id": "222d0fd7-b71a-490b-966c-e91a092b9941",
+    "customer_id": 1075,
+    "customer_email": "emilydennis@example.org",
+    "amount": 162.54,
+    "status": "Refused",
+    "order_timestamp": "2026-06-23T03:07:50"
+  },
+  {
+    "order_id": "c24eca58-867a-4b51-9431-5785146e256a",
+    "customer_id": 1057,
+    "customer_email": "steven42@example.com",
+    "amount": 760.06,
+    "status": "Canceled",
+    "order_timestamp": "2026-05-04T14:06:22"
+  },
+  {
+    "order_id": "90401693-fbc9-40cd-acb1-4b97a07691e2",
+    "customer_id": 1040,
+    "customer_email": "santiagoalexis@example.net",
+    "amount": 888.8,
+    "status": "Refused",
+    "order_timestamp": "2026-03-25T16:58:42"
+  },
+  {
+    "order_id": "8179a4ed-938c-466d-be94-c4c295af8f77",
+    "customer_id": 1066,
+    "customer_email": "lyates@example.net",
+    "amount": 622.82,
+    "status": "Canceled",
+    "order_timestamp": "2026-06-15T04:35:45"
+  },
+  {
+    "order_id": "a1e8575a-a974-41fc-802f-7af47f9d1667",
+    "customer_id": 1039,
+    "customer_email": "ifox@example.org",
+    "amount": 1128.11,
+    "status": null,
+    "order_timestamp": "2026-01-09T02:45:05"
+  },
+  {
+    "order_id": "3ebe06a5-9b1b-4db2-a3ca-5d1bb3f9eb67",
+    "customer_id": 1069,
+    "customer_email": " RJENKINS@EXAMPLE.ORG",
+    "amount": 944.58,
+    "status": "Refused",
+    "order_timestamp": "2026-08-07T13:43:03"
+  },
+  {
+    "order_id": "75bbd474-768d-4747-b5f4-e894d308c324",
+    "customer_id": 1007,
+    "customer_email": "davismarcus@example.org",
+    "amount": 710.82,
+    "status": "Refused",
+    "order_timestamp": "2026-02-08T15:07:07"
+  },
+  {
+    "order_id": "6e5ee8bf-d479-4915-a348-3e82132ec029",
+    "customer_id": 1059,
+    "customer_email": "martinandrew@example.net",
+    "amount": -25.5,
+    "status": "Pending",
+    "order_timestamp": "2026-08-20T22:11:32"
+  },
+  {
+    "order_id": "3e52fecc-f370-4351-9f3a-2d34b45251c0",
+    "customer_id": 1016,
+    "customer_email": "adamscorey@example.org",
+    "amount": 406.38,
+    "status": "Pending",
+    "order_timestamp": "2026-06-30T11:43:58"
+  },
+  {
+    "order_id": "de009771-0dbf-4e21-a77f-9d6c1df7ed09",
+    "customer_id": 1002,
+    "customer_email": "brooksmichael@example.org",
+    "amount": 615.85,
+    "status": "Canceled",
+    "order_timestamp": "2026-07-29T10:36:49"
+  },
+  {
+    "order_id": "c23bf976-3ee6-45d9-8e9a-5397e84cb1c0",
+    "customer_id": 1032,
+    "customer_email": "jason09@example.com",
+    "amount": 680.24,
+    "status": "Canceled",
+    "order_timestamp": "2026-01-16T02:15:24"
+  },
+  {
+    "order_id": "2d7aa18d-2761-4228-ac26-efd1211de016",
+    "customer_id": 1022,
+    "customer_email": "raycastro@example.net",
+    "amount": 95.05,
+    "status": "Pending",
+    "order_timestamp": "2026-03-23T19:47:49"
+  },
+  {
+    "order_id": "5ffe2896-d088-42f3-a769-b0714074998d",
+    "customer_id": 1060,
+    "customer_email": "pbeck@example.net",
+    "amount": 1109.35,
+    "status": "Completed",
+    "order_timestamp": "2026-01-03T04:23:39"
+  },
+  {
+    "order_id": "96218f2b-beaf-4de6-a9c8-ab9d2e919b5b",
+    "customer_id": 1063,
+    "customer_email": "teresa25@example.net",
+    "amount": 829.74,
+    "status": "Completed",
+    "order_timestamp": "2026-02-23T18:49:58"
+  },
+  {
+    "order_id": "df51381c-5522-409a-b32e-8312295dffeb",
+    "customer_id": 1047,
+    "customer_email": "samantha38@example.org",
+    "amount": 926.37,
+    "status": "Canceled",
+    "order_timestamp": "2026-07-03T18:54:03"
+  },
+  {
+    "order_id": "19701ecd-071f-40f4-b5a9-9d21082dc046",
+    "customer_id": 1033,
+    "customer_email": "kmeza@example.com",
+    "amount": 561.63,
+    "status": "Pending",
+    "order_timestamp": "2026-02-14T20:13:17"
+  },
+  {
+    "order_id": "73b31fe2-b64d-4592-991d-cf85ca17b06c",
+    "customer_id": 1067,
+    "customer_email": "amandapeterson@example.com",
+    "amount": 995.76,
+    "status": "Pending",
+    "order_timestamp": "2026-01-19T07:07:13"
+  },
+  {
+    "order_id": "e87b9ac0-3413-4454-bef8-e1535dfb17b2",
+    "customer_id": 1041,
+    "customer_email": " FREEMANJENNIFER@EXAMPLE.NET",
+    "amount": 768.67,
+    "status": null,
+    "order_timestamp": "2026-06-16T16:37:32"
+  },
+  {
+    "order_id": "f63bafef-dec2-4289-81b6-90b82661ad1e",
+    "customer_id": 1016,
+    "customer_email": "timothy94@example.org",
+    "amount": 541.15,
+    "status": "Completed",
+    "order_timestamp": "2026-08-26T21:18:46"
+  },
+  {
+    "order_id": "f2c0698a-461e-4f3a-b526-2c9c285d13c7",
+    "customer_id": 1028,
+    "customer_email": "stephanie04@example.com",
+    "amount": 8.95,
+    "status": "Pending",
+    "order_timestamp": "2026-08-23T15:59:24"
+  },
+  {
+    "order_id": "39ca458c-6aa3-40ce-8d27-a4f95a9cc7dc",
+    "customer_id": 1043,
+    "customer_email": "umoore@example.net",
+    "amount": 104.18,
+    "status": "Completed",
+    "order_timestamp": "2026-08-06T15:53:17"
+  },
+  {
+    "order_id": "5aa446d5-69f1-4afb-9e2d-3e8e54efea19",
+    "customer_id": 1006,
+    "customer_email": "qking@example.net",
+    "amount": 1129.03,
+    "status": "Completed",
+    "order_timestamp": "2026-07-08T05:13:01"
+  },
+  {
+    "order_id": "84b49bd4-f807-4fe5-b43f-5b7f8006e440",
+    "customer_id": 1023,
+    "customer_email": "briancohen@example.net",
+    "amount": 62.04,
+    "status": null,
+    "order_timestamp": "2026-07-21T07:32:57"
+  },
+  {
+    "order_id": "e93918a5-9155-44b4-8be4-582a4c772229",
+    "customer_id": 1021,
+    "customer_email": "xhayes@example.net",
+    "amount": 117.23,
+    "status": "Canceled",
+    "order_timestamp": "2026-01-02T08:41:37"
+  },
+  {
+    "order_id": "a062ec0f-44ea-4d8c-b491-cb05e3f0f2a4",
+    "customer_id": 1043,
+    "customer_email": "jerry40@example.org",
+    "amount": 1066.6,
+    "status": "Pending",
+    "order_timestamp": "2026-04-06T00:34:22"
+  },
+  {
+    "order_id": "7c948059-7535-43d4-ba72-b486e4a9f983",
+    "customer_id": 1022,
+    "customer_email": "nancy61@example.net",
+    "amount": 191.01,
+    "status": "Canceled",
+    "order_timestamp": "2026-06-30T05:45:08"
+  },
+  {
+    "order_id": "6c64489e-13c8-4835-891e-97c48d58ac7e",
+    "customer_id": 1051,
+    "customer_email": "kimberly14@example.net",
+    "amount": 435.74,
+    "status": "Completed",
+    "order_timestamp": "2026-01-11T13:04:20"
+  },
+  {
+    "order_id": "d4287f98-3989-4fcc-84b7-b1d9587e91da",
+    "customer_id": 1073,
+    "customer_email": " CHARLES22@EXAMPLE.NET",
+    "amount": 661.8,
+    "status": "Pending",
+    "order_timestamp": "2026-08-12T22:20:35"
+  },
+  {
+    "order_id": "232603a4-af2b-4dd1-be04-c48640beee8f",
+    "customer_id": 1048,
+    "customer_email": " ANDERSONMICHELLE@EXAMPLE.COM",
+    "amount": 541.48,
+    "status": null,
+    "order_timestamp": "2026-02-06T17:08:06"
+  },
+  {
+    "order_id": "598379bf-0e95-40e6-b51b-f93fadd7dc8d",
+    "customer_id": 1012,
+    "customer_email": "geoffreyconway@example.org",
+    "amount": 600.6,
+    "status": "Completed",
+    "order_timestamp": "2026-07-07T21:14:00"
+  },
+  {
+    "order_id": "110903b1-c88b-48f7-bbf7-cecbc13a9169",
+    "customer_id": 1027,
+    "customer_email": "angel98@example.net",
+    "amount": 1150.77,
+    "status": "Canceled",
+    "order_timestamp": "2026-05-06T21:40:57"
+  },
+  {
+    "order_id": "00bafd9f-371b-4f56-9efb-f684da8626ff",
+    "customer_id": 1023,
+    "customer_email": "barnettjennifer@example.org",
+    "amount": 1168.36,
+    "status": "Completed",
+    "order_timestamp": "2026-03-03T18:34:48"
+  },
+  {
+    "order_id": "5c8676f9-cf09-43cf-88a8-5022b4366335",
+    "customer_id": 1005,
+    "customer_email": "nathanielgarcia@example.org",
+    "amount": 491.26,
+    "status": null,
+    "order_timestamp": "2026-02-15T08:57:48"
+  },
+  {
+    "order_id": "dd06c36f-0ddd-4fa8-bac2-316c4046e15a",
+    "customer_id": 1080,
+    "customer_email": "matthewaguirre@example.net",
+    "amount": 50.52,
+    "status": "Completed",
+    "order_timestamp": "2026-02-07T03:57:46"
+  },
+  {
+    "order_id": "6e14d7dc-489d-477b-a28b-2c0ea9cc9431",
+    "customer_id": 1068,
+    "customer_email": "lunajulie@example.net",
+    "amount": 457.26,
+    "status": null,
+    "order_timestamp": "2026-06-23T22:49:47"
+  },
+  {
+    "order_id": "f2930b97-5ae0-48f8-8e30-2ef7e476d7d4",
+    "customer_id": 1049,
+    "customer_email": "lauramason@example.net",
+    "amount": 325.89,
+    "status": "Refused",
+    "order_timestamp": "2026-01-12T23:05:28"
+  },
+  {
+    "order_id": "60cc3ad3-e8b8-4aa3-aaf5-6b10b99c9aab",
+    "customer_id": 1019,
+    "customer_email": "jjohnson@example.com",
+    "amount": 572.9,
+    "status": "Refused",
+    "order_timestamp": "2026-05-18T11:48:19"
+  },
+  {
+    "order_id": "f55bfdfa-d9ee-4157-a134-8897e0b754f5",
+    "customer_id": 1041,
+    "customer_email": "cwalsh@example.org",
+    "amount": 645.42,
+    "status": "Completed",
+    "order_timestamp": "2026-07-30T17:08:27"
+  },
+  {
+    "order_id": "208e4eac-fe41-43f7-a14c-ab1a6b3232d3",
+    "customer_id": 1049,
+    "customer_email": "susandavis@example.net",
+    "amount": 996.0,
+    "status": "Refused",
+    "order_timestamp": "2026-06-16T05:49:48"
+  },
+  {
+    "order_id": "dd966fed-a717-4f5e-b33e-aeb5f4a300d2",
+    "customer_id": 1010,
+    "customer_email": "daniel66@example.com",
+    "amount": 1194.24,
+    "status": "Refused",
+    "order_timestamp": "2026-07-02T03:42:08"
+  },
+  {
+    "order_id": "13651583-8936-4105-8afd-1626dbeede4d",
+    "customer_id": 1061,
+    "customer_email": "joshuamoyer@example.org",
+    "amount": 85.18,
+    "status": "Canceled",
+    "order_timestamp": "2026-01-19T10:49:53"
+  },
+  {
+    "order_id": "ec44db30-6583-4ced-aa92-525d8f67e827",
+    "customer_id": 1039,
+    "customer_email": "jacksonsarah@example.com",
+    "amount": 252.05,
+    "status": "Pending",
+    "order_timestamp": "2026-07-09T06:00:07"
+  },
+  {
+    "order_id": "44d5eac5-4471-4519-ac42-3c9740a2830a",
+    "customer_id": 1033,
+    "customer_email": "gonzalezbrenda@example.org",
+    "amount": 717.66,
+    "status": "Pending",
+    "order_timestamp": "2026-01-30T12:23:22"
+  },
+  {
+    "order_id": "ec8f3d33-f3af-45d5-b818-ae6fe11073d5",
+    "customer_id": 1003,
+    "customer_email": "pgardner@example.net",
+    "amount": 165.98,
+    "status": "Canceled",
+    "order_timestamp": "2026-07-26T19:16:47"
+  },
+  {
+    "order_id": "f4a43858-de36-43fa-82d3-c696f8b69549",
+    "customer_id": 1026,
+    "customer_email": "joannarichardson@example.com",
+    "amount": 72.76,
+    "status": "Canceled",
+    "order_timestamp": "2026-03-20T22:58:30"
+  },
+  {
+    "order_id": "2163f448-6b35-48c9-84ca-45853308b983",
+    "customer_id": 1033,
+    "customer_email": "kjimenez@example.com",
+    "amount": 5.77,
+    "status": "Canceled",
+    "order_timestamp": "2026-02-06T20:21:25"
+  },
+  {
+    "order_id": "4d924641-d3b3-46cc-9aae-a32852d781a4",
+    "customer_id": 1041,
+    "customer_email": "brandonharris@example.org",
+    "amount": 1091.37,
+    "status": "Canceled",
+    "order_timestamp": "2026-03-24T10:31:21"
+  },
+  {
+    "order_id": "d85ceec0-8438-457d-9b31-f2eae1d81aec",
+    "customer_id": 1077,
+    "customer_email": "tjefferson@example.net",
+    "amount": 744.98,
+    "status": "Pending",
+    "order_timestamp": "2026-01-02T14:07:08"
+  },
+  {
+    "order_id": "4585d08a-2f59-4bae-af4b-3457b41389fa",
+    "customer_id": 1028,
+    "customer_email": "richard40@example.com",
+    "amount": 960.11,
+    "status": "Refused",
+    "order_timestamp": "2026-08-19T01:43:55"
+  },
+  {
+    "order_id": "9a925684-3343-4660-8678-04a9382c48e5",
+    "customer_id": 1035,
+    "customer_email": "martinezsarah@example.org",
+    "amount": 139.84,
+    "status": "Canceled",
+    "order_timestamp": "2026-04-24T10:25:46"
+  },
+  {
+    "order_id": "9a884f5b-5dbd-4cd7-8163-802f1c39f5b7",
+    "customer_id": 1066,
+    "customer_email": "ymichael@example.net",
+    "amount": 958.7,
+    "status": null,
+    "order_timestamp": "2026-04-16T09:03:48"
+  },
+  {
+    "order_id": "29d9307a-4958-4ddd-857e-822156bb519d",
+    "customer_id": 1036,
+    "customer_email": "boliver@example.com",
+    "amount": 61.35,
+    "status": "Canceled",
+    "order_timestamp": "2026-07-13T00:32:52"
+  },
+  {
+    "order_id": "4d1599a0-5811-4ab7-b9fa-0f14286adb95",
+    "customer_id": 1072,
+    "customer_email": "daniel69@example.net",
+    "amount": 348.28,
+    "status": null,
+    "order_timestamp": "2026-04-24T15:11:56"
+  },
+  {
+    "order_id": "6cba2ea2-5504-464a-947a-049347958899",
+    "customer_id": 1030,
+    "customer_email": " XBAXTER@EXAMPLE.COM",
+    "amount": 731.32,
+    "status": "Canceled",
+    "order_timestamp": "2026-04-15T19:48:50"
+  },
+  {
+    "order_id": "d3aa3bfc-e2ee-4c63-a701-9309e25c0e7f",
+    "customer_id": 1073,
+    "customer_email": "brittanymcgee@example.org",
+    "amount": 186.3,
+    "status": null,
+    "order_timestamp": "2026-08-28T06:21:28"
+  },
+  {
+    "order_id": "12149cbb-1d0e-4007-88e4-d7ca5de00cbb",
+    "customer_id": 1043,
+    "customer_email": "williamsgloria@example.org",
+    "amount": 23.0,
+    "status": "Completed",
+    "order_timestamp": "2026-08-09T18:33:00"
+  },
+  {
+    "order_id": "d6f31610-4af0-488a-80b1-eb54a1e3b146",
+    "customer_id": 1001,
+    "customer_email": "nolanbilly@example.net",
+    "amount": -25.5,
+    "status": null,
+    "order_timestamp": "2026-08-30T15:09:38"
+  },
+  {
+    "order_id": "3436b17c-978a-4aee-a7fa-e721bfada6fd",
+    "customer_id": 1028,
+    "customer_email": "fbullock@example.net",
+    "amount": 281.07,
+    "status": null,
+    "order_timestamp": "2026-06-01T16:24:48"
+  },
+  {
+    "order_id": "a27c91f8-cf03-4f96-b88e-98c97254ce24",
+    "customer_id": 1036,
+    "customer_email": "briangiles@example.com",
+    "amount": 447.66,
+    "status": "Pending",
+    "order_timestamp": "2026-01-16T00:35:58"
+  },
+  {
+    "order_id": "3dec2c10-3385-4c30-b681-75f7c9d145d3",
+    "customer_id": 1011,
+    "customer_email": "xkelley@example.org",
+    "amount": 65.02,
+    "status": "Completed",
+    "order_timestamp": "2026-05-17T00:57:57"
+  },
+  {
+    "order_id": "54a91877-9ba8-4a99-a1db-70d9a5f4e8bc",
+    "customer_id": 1011,
+    "customer_email": "warrendaniel@example.net",
+    "amount": 411.53,
+    "status": "Completed",
+    "order_timestamp": "2026-01-17T15:41:10"
+  },
+  {
+    "order_id": "96e84d02-f6a9-4e3a-857d-6620d7187b15",
+    "customer_id": 1078,
+    "customer_email": "andrew12@example.net",
+    "amount": 508.87,
+    "status": "Canceled",
+    "order_timestamp": "2026-05-22T17:03:47"
+  },
+  {
+    "order_id": "2259fbec-c7d1-44e4-9820-d3f82d5f24a6",
+    "customer_id": 1008,
+    "customer_email": "robert20@example.com",
+    "amount": 630.06,
+    "status": null,
+    "order_timestamp": "2026-06-14T11:26:56"
+  },
+  {
+    "order_id": "7507427e-59c6-4724-8eb9-d85c7196130c",
+    "customer_id": 1050,
+    "customer_email": "nguyenerin@example.com",
+    "amount": 66.04,
+    "status": "Completed",
+    "order_timestamp": "2026-08-13T10:07:42"
+  },
+  {
+    "order_id": "ad090745-05a8-44e2-83a9-5e2d563fe709",
+    "customer_id": 1050,
+    "customer_email": "tami30@example.org",
+    "amount": 854.94,
+    "status": "Completed",
+    "order_timestamp": "2026-05-11T08:35:13"
+  },
+  {
+    "order_id": "c93efe55-984b-4ec5-bbe1-8437705ae351",
+    "customer_id": 1047,
+    "customer_email": "davenportvalerie@example.org",
+    "amount": 167.11,
+    "status": "Completed",
+    "order_timestamp": "2026-07-21T04:22:56"
+  },
+  {
+    "order_id": "700c3faa-339b-4734-b859-0ed4a5126a89",
+    "customer_id": 1015,
+    "customer_email": "asanchez@example.com",
+    "amount": 846.3,
+    "status": null,
+    "order_timestamp": "2026-08-07T07:33:50"
+  },
+  {
+    "order_id": "121ae4da-4f88-4292-8566-add743026dbc",
+    "customer_id": 1025,
+    "customer_email": "gregwatson@example.org",
+    "amount": 81.3,
+    "status": "Completed",
+    "order_timestamp": "2026-05-03T06:31:49"
+  },
+  {
+    "order_id": "0d209716-6c6f-402c-ab5b-1f15349d3c41",
+    "customer_id": 1080,
+    "customer_email": "ggutierrez@example.net",
+    "amount": 383.91,
+    "status": "Refused",
+    "order_timestamp": "2026-04-20T21:52:57"
+  },
+  {
+    "order_id": "dc003589-41be-4b68-841f-81b3fbe4a903",
+    "customer_id": 1060,
+    "customer_email": "sotorebecca@example.org",
+    "amount": 1040.82,
+    "status": "Pending",
+    "order_timestamp": "2026-03-16T10:54:20"
+  },
+  {
+    "order_id": "cc95e638-936b-41d5-aa34-a0bbe0ac943e",
+    "customer_id": 1016,
+    "customer_email": "browntravis@example.net",
+    "amount": 478.83,
+    "status": null,
+    "order_timestamp": "2026-04-16T13:46:33"
+  },
+  {
+    "order_id": "7a829b2f-ab5e-4a60-ab38-6f189b2ffb8d",
+    "customer_id": 1015,
+    "customer_email": "bethcampos@example.org",
+    "amount": 840.01,
+    "status": "Completed",
+    "order_timestamp": "2026-01-04T00:40:12"
+  },
+  {
+    "order_id": "eaf301d4-a5a0-4cdc-853c-2313ca078714",
+    "customer_id": 1006,
+    "customer_email": " GEORGETODD@EXAMPLE.NET",
+    "amount": 931.24,
+    "status": "Pending",
+    "order_timestamp": "2026-07-25T01:13:51"
+  },
+  {
+    "order_id": "fd4d057c-ac30-4533-9595-7382efa3f6dc",
+    "customer_id": 1066,
+    "customer_email": "rhardin@example.org",
+    "amount": 860.11,
+    "status": "Refused",
+    "order_timestamp": "2026-01-06T02:17:05"
+  },
+  {
+    "order_id": "301636a4-35b9-442f-a5d4-db7c5dc2558e",
+    "customer_id": 1060,
+    "customer_email": "lindsey71@example.net",
+    "amount": 875.22,
+    "status": "Pending",
+    "order_timestamp": "2026-06-07T09:06:39"
+  },
+  {
+    "order_id": "7209ce61-3d22-4529-876a-801c6229bec4",
+    "customer_id": 1001,
+    "customer_email": "roylynch@example.org",
+    "amount": 363.03,
+    "status": null,
+    "order_timestamp": "2026-05-15T07:20:30"
+  },
+  {
+    "order_id": "b5c50ba3-9bef-4452-9c81-92c1a688f55d",
+    "customer_id": 1077,
+    "customer_email": "john21@example.net",
+    "amount": -25.5,
+    "status": "Canceled",
+    "order_timestamp": "2026-05-15T04:35:51"
+  },
+  {
+    "order_id": "1f199768-ee5a-43c8-97ea-a2d7d195cf19",
+    "customer_id": 1058,
+    "customer_email": "mnicholson@example.com",
+    "amount": 609.95,
+    "status": "Refused",
+    "order_timestamp": "2026-03-11T01:42:29"
+  },
+  {
+    "order_id": "f84cf32c-d3cf-4c31-8287-2e240c9c62e6",
+    "customer_id": 1040,
+    "customer_email": "lisaharvey@example.com",
+    "amount": 435.12,
+    "status": "Completed",
+    "order_timestamp": "2026-08-02T13:13:45"
+  },
+  {
+    "order_id": "08b8c576-2df6-43d0-ab36-3d6c6793351b",
+    "customer_id": 1048,
+    "customer_email": "ycaldwell@example.com",
+    "amount": -25.5,
+    "status": "Completed",
+    "order_timestamp": "2026-08-08T01:06:53"
+  },
+  {
+    "order_id": "62fac1d5-d56e-43fd-9597-1359164b8eb1",
+    "customer_id": 1008,
+    "customer_email": "bennettandrew@example.org",
+    "amount": 436.09,
+    "status": "Completed",
+    "order_timestamp": "2026-03-28T18:05:44"
+  },
+  {
+    "order_id": "7d77e8a0-23d3-4f7b-ae07-b5fb2bb24797",
+    "customer_id": 1005,
+    "customer_email": "gcastillo@example.net",
+    "amount": -25.5,
+    "status": "Pending",
+    "order_timestamp": "2026-07-21T05:26:31"
+  },
+  {
+    "order_id": "699bee6d-dadd-4573-8f1d-e79bc2cdcdf3",
+    "customer_id": 1061,
+    "customer_email": "wjarvis@example.net",
+    "amount": 906.01,
+    "status": "Refused",
+    "order_timestamp": "2026-08-11T13:14:27"
+  },
+  {
+    "order_id": "b7d7966e-b154-4055-b001-4a27e9c7deee",
+    "customer_id": 1073,
+    "customer_email": "wagnerashley@example.com",
+    "amount": 59.42,
+    "status": null,
+    "order_timestamp": "2026-04-03T04:21:23"
+  },
+  {
+    "order_id": "4a56d561-2794-4076-ad3d-ec4e355d5a64",
+    "customer_id": 1037,
+    "customer_email": "kara09@example.org",
+    "amount": 1057.8,
+    "status": "Pending",
+    "order_timestamp": "2026-06-08T20:24:07"
+  },
+  {
+    "order_id": "005b41c3-552e-4f0a-8457-d624b0bf7a2c",
+    "customer_id": 1072,
+    "customer_email": "anthonyprice@example.net",
+    "amount": 600.6,
+    "status": "Canceled",
+    "order_timestamp": "2026-06-03T12:26:16"
+  },
+  {
+    "order_id": "4e1a0d82-3e03-4438-90e7-01fa9bffdf92",
+    "customer_id": 1050,
+    "customer_email": "mariah38@example.com",
+    "amount": 331.2,
+    "status": "Refused",
+    "order_timestamp": "2026-07-31T13:16:35"
+  },
+  {
+    "order_id": "a54c0081-22bb-4662-8c0f-ac1a5973e8dd",
+    "customer_id": 1028,
+    "customer_email": "shannon09@example.net",
+    "amount": 1093.83,
+    "status": "Pending",
+    "order_timestamp": "2026-06-17T16:13:09"
+  },
+  {
+    "order_id": "f48a8431-b325-4847-aa7b-d55ca04babd7",
+    "customer_id": 1034,
+    "customer_email": "kristi11@example.net",
+    "amount": 538.93,
+    "status": "Refused",
+    "order_timestamp": "2026-03-16T19:57:41"
+  },
+  {
+    "order_id": "e9b43513-ebe1-4327-af14-ec4cc6e7bf76",
+    "customer_id": 1074,
+    "customer_email": "elizabeth65@example.com",
+    "amount": 1052.89,
+    "status": "Completed",
+    "order_timestamp": "2026-03-13T20:08:53"
+  },
+  {
+    "order_id": "8ac0d50a-aaad-4dcc-8596-300c355b7de9",
+    "customer_id": 1015,
+    "customer_email": "dbridges@example.net",
+    "amount": 455.38,
+    "status": "Completed",
+    "order_timestamp": "2026-04-11T09:07:11"
+  },
+  {
+    "order_id": "b003e5bc-9ccc-43c5-a797-2bcecc813708",
+    "customer_id": 1021,
+    "customer_email": "brandy80@example.org",
+    "amount": 1103.14,
+    "status": "Pending",
+    "order_timestamp": "2026-03-09T04:02:25"
+  },
+  {
+    "order_id": "24ef4061-b711-49b4-ba9b-6432166fc957",
+    "customer_id": 1049,
+    "customer_email": " MARK47@EXAMPLE.COM",
+    "amount": 639.37,
+    "status": "Refused",
+    "order_timestamp": "2026-08-17T05:00:13"
+  },
+  {
+    "order_id": "76e6c4c2-d154-4d28-a89d-62fd33a393ca",
+    "customer_id": 1045,
+    "customer_email": "glopez@example.org",
+    "amount": 1108.45,
+    "status": "Pending",
+    "order_timestamp": "2026-07-05T19:24:19"
+  },
+  {
+    "order_id": "b06c82e6-5b4a-445f-8138-18f8bddd2d85",
+    "customer_id": 1031,
+    "customer_email": "taylor57@example.org",
+    "amount": 177.88,
+    "status": "Completed",
+    "order_timestamp": "2026-05-08T01:15:30"
+  }
+]
