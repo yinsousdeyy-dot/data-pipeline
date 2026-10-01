@@ -1,5 +1,5 @@
 ############################################
-# Data Pipeline Infrastructure
+# Data Pipeline Infrastructure with Terraform
 # Components:
 # - Ingestion & Storage
 # - Compute & Processing
@@ -8,8 +8,7 @@
 ############################################
 
 terraform {
-  required_version = ">= 1.3.0"
-
+  required_version = ">= 1.0"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -22,33 +21,33 @@ provider "aws" {
   region = var.aws_region
 }
 
-data "aws_caller_identity" "current" {}
-
 # ============================================
 # 1. INGESTION & STORAGE
 # ============================================
 
-resource "aws_s3_bucket" "raw_data" {
-  bucket = "${var.project_name}-raw-${data.aws_caller_identity.current.account_id}"
+# S3 Bucket for Data Ingestion
+resource "aws_s3_bucket" "data_ingestion" {
+  bucket = "${var.project_name}-ingestion-${data.aws_caller_identity.current.account_id}"
 
   tags = {
-    Name        = "raw-data"
+    Name        = "Data Ingestion Bucket"
     Environment = var.environment
-    Project     = var.project_name
     Component   = "Ingestion & Storage"
   }
 }
 
-resource "aws_s3_bucket_versioning" "raw_data" {
-  bucket = aws_s3_bucket.raw_data.id
+# Enable versioning
+resource "aws_s3_bucket_versioning" "data_ingestion" {
+  bucket = aws_s3_bucket.data_ingestion.id
 
   versioning_configuration {
     status = "Enabled"
   }
 }
 
-resource "aws_s3_bucket_server_side_encryption_configuration" "raw_data" {
-  bucket = aws_s3_bucket.raw_data.id
+# Enable encryption
+resource "aws_s3_bucket_server_side_encryption_configuration" "data_ingestion" {
+  bucket = aws_s3_bucket.data_ingestion.id
 
   rule {
     apply_server_side_encryption_by_default {
@@ -61,6 +60,33 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "raw_data" {
 # 2. COMPUTE & PROCESSING
 # ============================================
 
+# EMR Cluster for Data Processing
+resource "aws_emr_cluster" "data_processing" {
+  name              = "${var.project_name}-emr-cluster"
+  release_label     = var.emr_release_label
+  applications      = [{ name = "Spark" }, { name = "Hadoop" }]
+  service_iam_role  = aws_iam_role.emr_service_role.arn
+  ec2_instance_profile = aws_iam_instance_profile.emr_ec2_profile.arn
+
+  ec2_attributes {
+    instance_profile                  = aws_iam_instance_profile.emr_ec2_profile.arn
+    security_group                    = aws_security_group.emr.id
+    key_name                          = var.ec2_key_pair
+    subnet_id                         = var.subnet_id
+  }
+
+  master_node_type      = var.emr_master_instance_type
+  core_node_type        = var.emr_core_instance_type
+  core_node_count       = var.emr_core_node_count
+
+  tags = {
+    Name        = "Data Processing Cluster"
+    Environment = var.environment
+    Component   = "Compute & Processing"
+  }
+}
+
+# Security Group for EMR
 resource "aws_security_group" "emr" {
   name        = "${var.project_name}-emr-sg"
   description = "Security group for EMR cluster"
@@ -81,20 +107,95 @@ resource "aws_security_group" "emr" {
   }
 
   tags = {
-    Name      = "${var.project_name}-emr-sg"
-    Project   = var.project_name
-    Component = "Compute & Processing"
+    Name = "EMR Security Group"
   }
 }
 
+# ============================================
+# 3. ORCHESTRATION & SCHEDULING
+# ============================================
+
+# Step Functions State Machine for Pipeline Orchestration
+resource "aws_sfn_state_machine" "pipeline_orchestration" {
+  name       = "${var.project_name}-pipeline-state-machine"
+  role_arn   = aws_iam_role.sfn_role.arn
+  definition = jsonencode({
+    Comment = "Data Pipeline Orchestration"
+    StartAt = "IngestData"
+    States = {
+      IngestData = {
+        Type     = "Task"
+        Resource = aws_lambda_function.ingest_data.arn
+        Next     = "ProcessData"
+      }
+      ProcessData = {
+        Type     = "Task"
+        Resource = "arn:aws:states:::elasticmapreduce:addJobFlowSteps.sync"
+        End      = true
+      }
+    }
+  })
+
+  tags = {
+    Name        = "Pipeline Orchestration"
+    Environment = var.environment
+    Component   = "Orchestration & Scheduling"
+  }
+}
+
+# EventBridge Rule for Scheduling
+resource "aws_cloudwatch_event_rule" "pipeline_schedule" {
+  name                = "${var.project_name}-pipeline-schedule"
+  description         = "Trigger data pipeline on schedule"
+  schedule_expression = var.pipeline_schedule_expression
+
+  tags = {
+    Name = "Pipeline Schedule"
+  }
+}
+
+resource "aws_cloudwatch_event_target" "pipeline_target" {
+  rule      = aws_cloudwatch_event_rule.pipeline_schedule.name
+  arn       = aws_sfn_state_machine.pipeline_orchestration.arn
+  role_arn  = aws_iam_role.eventbridge_role.arn
+  target_id = "PipelineStateMachine"
+}
+
+# Lambda Function for Data Ingestion
+resource "aws_lambda_function" "ingest_data" {
+  filename      = "lambda_ingest.zip"
+  function_name = "${var.project_name}-ingest-data"
+  role          = aws_iam_role.lambda_role.arn
+  handler       = "index.handler"
+  runtime       = "python3.11"
+
+  environment {
+    variables = {
+      S3_BUCKET = aws_s3_bucket.data_ingestion.id
+    }
+  }
+
+  tags = {
+    Name = "Data Ingestion Lambda"
+  }
+}
+
+# ============================================
+# 4. SECURITY & MONITORING (IAM)
+# ============================================
+
+# Data source for AWS account ID
+data "aws_caller_identity" "current" {}
+
+# IAM Role for EMR Service
 resource "aws_iam_role" "emr_service_role" {
   name = "${var.project_name}-emr-service-role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [{
-      Effect = "Allow"
       Action = "sts:AssumeRole"
+      Effect = "Allow"
       Principal = {
         Service = "elasticmapreduce.amazonaws.com"
       }
@@ -107,14 +208,15 @@ resource "aws_iam_role_policy_attachment" "emr_service_policy" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole"
 }
 
+# IAM Role for EMR EC2 Instances
 resource "aws_iam_role" "emr_ec2_role" {
   name = "${var.project_name}-emr-ec2-role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [{
-      Effect = "Allow"
       Action = "sts:AssumeRole"
+      Effect = "Allow"
       Principal = {
         Service = "ec2.amazonaws.com"
       }
@@ -132,44 +234,15 @@ resource "aws_iam_role_policy_attachment" "emr_ec2_policy" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role"
 }
 
-resource "aws_emr_cluster" "processing" {
-  name          = "${var.project_name}-emr-cluster"
-  release_label = var.emr_release_label
-  applications  = ["Spark", "Hadoop"]
-
-  service_role = aws_iam_role.emr_service_role.arn
-
-  ec2_attributes {
-    instance_profile = aws_iam_instance_profile.emr_ec2_profile.arn
-    subnet_id       = var.subnet_id
-    emr_managed_master_security_group = aws_security_group.emr.id
-    emr_managed_slave_security_group  = aws_security_group.emr.id
-  }
-
-  master_instance_type = var.emr_master_instance_type
-  core_instance_type   = var.emr_core_instance_type
-  core_instance_count  = var.emr_core_instance_count
-
-  tags = {
-    Name        = "${var.project_name}-emr-cluster"
-    Environment = var.environment
-    Project     = var.project_name
-    Component   = "Compute & Processing"
-  }
-}
-
-# ============================================
-# 3. ORCHESTRATION & SCHEDULING
-# ============================================
-
+# IAM Role for Lambda
 resource "aws_iam_role" "lambda_role" {
-  name = "${var.project_name}-lambda-role"
+  name = "${var.project_name}-lambda-execution-role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [{
-      Effect = "Allow"
       Action = "sts:AssumeRole"
+      Effect = "Allow"
       Principal = {
         Service = "lambda.amazonaws.com"
       }
@@ -177,8 +250,8 @@ resource "aws_iam_role" "lambda_role" {
   })
 }
 
-resource "aws_iam_role_policy" "lambda_s3_access" {
-  name = "${var.project_name}-lambda-s3-access"
+resource "aws_iam_role_policy" "lambda_s3_policy" {
+  name = "${var.project_name}-lambda-s3-policy"
   role = aws_iam_role.lambda_role.id
 
   policy = jsonencode({
@@ -187,47 +260,22 @@ resource "aws_iam_role_policy" "lambda_s3_access" {
       Effect = "Allow"
       Action = [
         "s3:GetObject",
-        "s3:PutObject",
-        "s3:ListBucket"
+        "s3:PutObject"
       ]
-      Resource = [
-        aws_s3_bucket.raw_data.arn,
-        "${aws_s3_bucket.raw_data.arn}/*"
-      ]
+      Resource = "${aws_s3_bucket.data_ingestion.arn}/*"
     }]
   })
 }
 
-resource "aws_lambda_function" "ingest_data" {
-  function_name = "${var.project_name}-ingest-data"
-  role          = aws_iam_role.lambda_role.arn
-  handler       = "index.handler"
-  runtime       = "python3.11"
-  filename      = "lambda_ingest.zip"
-
-  source_code_hash = filebase64sha256("lambda_ingest.zip")
-
-  environment {
-    variables = {
-      S3_BUCKET = aws_s3_bucket.raw_data.id
-    }
-  }
-
-  tags = {
-    Name      = "${var.project_name}-ingest-data"
-    Project   = var.project_name
-    Component = "Orchestration & Scheduling"
-  }
-}
-
+# IAM Role for Step Functions
 resource "aws_iam_role" "sfn_role" {
-  name = "${var.project_name}-sfn-role"
+  name = "${var.project_name}-sfn-execution-role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [{
-      Effect = "Allow"
       Action = "sts:AssumeRole"
+      Effect = "Allow"
       Principal = {
         Service = "states.amazonaws.com"
       }
@@ -241,134 +289,66 @@ resource "aws_iam_role_policy" "sfn_policy" {
 
   policy = jsonencode({
     Version = "2012-10-17"
-    Statement = [{
-      Effect = "Allow"
-      Action = [
-        "lambda:InvokeFunction",
-        "elasticmapreduce:AddJobFlowSteps",
-        "elasticmapreduce:DescribeCluster",
-        "states:StartExecution"
-      ]
-      Resource = "*"
-    }]
+    Statement = [
+      {
+        Effect = "Allow"
+        Action = [
+          "lambda:InvokeFunction",
+          "elasticmapreduce:AddJobFlowSteps",
+          "elasticmapreduce:DescribeCluster"
+        ]
+        Resource = "*"
+      }
+    ]
   })
 }
 
-resource "aws_sfn_state_machine" "pipeline" {
-  name     = "${var.project_name}-pipeline"
-  role_arn = aws_iam_role.sfn_role.arn
-
-  definition = jsonencode({
-    StartAt = "Ingest"
-    States = {
-      Ingest = {
-        Type     = "Task"
-        Resource = aws_lambda_function.ingest_data.arn
-        Next     = "Process"
-      }
-      Process = {
-        Type     = "Task"
-        Resource = "arn:aws:states:::elasticmapreduce:addStep.sync"
-        Parameters = {
-          ClusterId = aws_emr_cluster.processing.id
-          Step = {
-            Name = "spark-processing-step"
-            ActionOnFailure = "TERMINATE_CLUSTER"
-            HadoopJarStep = {
-              Jar = "command-runner.jar"
-              Args = ["spark-submit", "s3://${aws_s3_bucket.raw_data.bucket}/scripts/process.py"]
-            }
-          }
-        }
-        End = true
-      }
-    }
-  })
-
-  tags = {
-    Name        = "${var.project_name}-pipeline"
-    Environment = var.environment
-    Project     = var.project_name
-    Component   = "Orchestration & Scheduling"
-  }
-}
-
-resource "aws_cloudwatch_event_rule" "pipeline_schedule" {
-  name                = "${var.project_name}-pipeline-schedule"
-  description         = "Run pipeline on a schedule"
-  schedule_expression = var.pipeline_schedule_expression
-
-  tags = {
-    Name      = "${var.project_name}-pipeline-schedule"
-    Project   = var.project_name
-    Component = "Orchestration & Scheduling"
-  }
-}
-
-resource "aws_cloudwatch_event_target" "pipeline_target" {
-  rule      = aws_cloudwatch_event_rule.pipeline_schedule.name
-  arn       = aws_sfn_state_machine.pipeline.arn
-  role_arn  = aws_iam_role.sfn_role.arn
-  target_id = "PipelineTarget"
-}
-
-# ============================================
-# 4. SECURITY & MONITORING (IAM)
-# ============================================
-
-resource "aws_iam_role" "monitoring_role" {
-  name = "${var.project_name}-monitoring-role"
+# IAM Role for EventBridge
+resource "aws_iam_role" "eventbridge_role" {
+  name = "${var.project_name}-eventbridge-role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [{
-      Effect = "Allow"
       Action = "sts:AssumeRole"
+      Effect = "Allow"
       Principal = {
-        Service = "cloudwatch.amazonaws.com"
+        Service = "events.amazonaws.com"
       }
     }]
   })
 }
 
-resource "aws_iam_policy" "monitoring_policy" {
-  name = "${var.project_name}-monitoring-policy"
+resource "aws_iam_role_policy" "eventbridge_policy" {
+  name = "${var.project_name}-eventbridge-policy"
+  role = aws_iam_role.eventbridge_role.id
 
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [{
       Effect = "Allow"
       Action = [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents",
-        "cloudwatch:PutMetricData",
-        "ec2:Describe*",
-        "elasticmapreduce:DescribeCluster"
+        "states:StartExecution"
       ]
-      Resource = "*"
+      Resource = aws_sfn_state_machine.pipeline_orchestration.arn
     }]
   })
 }
 
-resource "aws_iam_role_policy_attachment" "monitoring_attach" {
-  role       = aws_iam_role.monitoring_role.name
-  policy_arn = aws_iam_policy.monitoring_policy.arn
-}
-
+# CloudWatch Log Group for Pipeline Monitoring
 resource "aws_cloudwatch_log_group" "pipeline_logs" {
   name              = "/aws/data-pipeline/${var.project_name}"
   retention_in_days = var.log_retention_days
 
   tags = {
-    Name        = "${var.project_name}-pipeline-logs"
+    Name        = "Pipeline Logs"
     Environment = var.environment
-    Project     = var.project_name
     Component   = "Security & Monitoring"
   }
 }
 
-resource "aws_cloudwatch_metric_alarm" "emr_unhealthy_nodes" {
+# CloudWatch Alarms for Monitoring
+resource "aws_cloudwatch_metric_alarm" "emr_unhealthy" {
   alarm_name          = "${var.project_name}-emr-unhealthy-nodes"
   comparison_operator = "GreaterThanThreshold"
   evaluation_periods  = 2
@@ -377,109 +357,24 @@ resource "aws_cloudwatch_metric_alarm" "emr_unhealthy_nodes" {
   period              = 300
   statistic           = "Average"
   threshold           = 0
-  alarm_description   = "Alert when EMR has unhealthy nodes"
-
-  tags = {
-    Name      = "${var.project_name}-emr-unhealthy-nodes"
-    Project   = var.project_name
-    Component = "Security & Monitoring"
-  }
-}
-
-# ============================================
-# VARIABLES
-# ============================================
-
-variable "aws_region" {
-  description = "AWS region"
-  type        = string
-  default     = "us-east-1"
-}
-
-variable "project_name" {
-  description = "Project name prefix for all resources"
-  type        = string
-  default     = "data-pipeline"
-}
-
-variable "environment" {
-  description = "Deployment environment"
-  type        = string
-  default     = "dev"
-}
-
-variable "vpc_id" {
-  description = "VPC id"
-  type        = string
-}
-
-variable "subnet_id" {
-  description = "Subnet id for EMR and networking"
-  type        = string
-}
-
-variable "allowed_cidr_blocks" {
-  description = "CIDR ranges allowed for ingest and cluster access"
-  type        = list(string)
-  default     = ["0.0.0.0/0"]
-}
-
-variable "emr_release_label" {
-  description = "EMR release label"
-  type        = string
-  default     = "emr-6.15.0"
-}
-
-variable "emr_master_instance_type" {
-  description = "EMR master node instance type"
-  type        = string
-  default     = "m5.xlarge"
-}
-
-variable "emr_core_instance_type" {
-  description = "EMR core node instance type"
-  type        = string
-  default     = "m5.xlarge"
-}
-
-variable "emr_core_instance_count" {
-  description = "Number of EMR core nodes"
-  type        = number
-  default     = 2
-}
-
-variable "pipeline_schedule_expression" {
-  description = "Cron or rate expression for the pipeline trigger"
-  type        = string
-  default     = "cron(0 2 * * ? *)"
-}
-
-variable "log_retention_days" {
-  description = "CloudWatch log retention in days"
-  type        = number
-  default     = 30
+  alarm_description   = "Alert when EMR cluster has unhealthy nodes"
 }
 
 # ============================================
 # OUTPUTS
 # ============================================
 
-output "raw_bucket_name" {
-  value       = aws_s3_bucket.raw_data.bucket
-  description = "Name of the raw data bucket"
+output "s3_ingestion_bucket" {
+  value       = aws_s3_bucket.data_ingestion.id
+  description = "S3 bucket for data ingestion"
 }
 
 output "emr_cluster_id" {
-  value       = aws_emr_cluster.processing.id
-  description = "EMR cluster identifier"
+  value       = aws_emr_cluster.data_processing.id
+  description = "EMR cluster ID for data processing"
 }
 
-output "pipeline_state_machine_arn" {
-  value       = aws_sfn_state_machine.pipeline.arn
-  description = "Step Functions orchestration ARN"
-}
-
-output "log_group_name" {
-  value       = aws_cloudwatch_log_group.pipeline_logs.name
-  description = "Central log group for pipeline monitoring"
+output "state_machine_arn" {
+  value       = aws_sfn_state_machine.pipeline_orchestration.arn
+  description = "Step Functions state machine ARN for orchestration"
 }
