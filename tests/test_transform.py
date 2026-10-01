@@ -26,6 +26,7 @@ def test_valid_record_transformation(transformer):
     assert clean_df.iloc[0]["status"] == "COMPLETED"
 
 def test_quarantine_negative_amount_invalid_email(transformer) :
+    # this must be samlpe; real database in encryped.
     raw_data = [
         {
             "order_id": "ord-002",
