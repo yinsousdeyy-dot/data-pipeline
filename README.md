@@ -23,37 +23,6 @@ This project is designed to be easy to understand, test, and extend for learning
 - Data quality checks after load
 - Pytest coverage for transform logic
 
-## Project structure
-
-```text
-.
-├── configuration/
-│   └── settings.py
-├── data/
-│   ├── processed/
-│   └── raw/
-├── src/
-│   ├── extracts/
-│   │   └── api_extractor.py
-│   ├── load/
-│   │   └── db_loader.py
-│   ├── scripts/
-│   │   └── init_db.py
-│   ├── transform/
-│   │   ├── cleaner.py
-│   │   └── schemas.py
-│   └── utils/
-│       └── db.py
-├── tests/
-│   └── test_transform.py
-├── .env.example
-├── .gitignore
-├── main.py
-├── requirements.txt
-├── taks.tf
-└── README.md
-```
-
 ## Requirements
 
 Install the Python dependencies:
