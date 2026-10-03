@@ -12,6 +12,8 @@ The pipeline is organized into three main stages:
 
 This project is designed to be easy to understand, test, and extend for learning and portfolio use.
 
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/daef68d7-77d9-4200-bb7e-f2e3cbcf2bb4" />
+
 ## Features
 
 - Synthetic data generation with Faker
