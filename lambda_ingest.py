@@ -7,6 +7,8 @@ import json
 import logging
 import boto3
 import os
+
+import urllib.request
 from datetime import datetime
 
 logger = logging.getLogger()
@@ -14,7 +16,8 @@ logger.setLevel(logging.INFO)
 
 s3_client = boto3.client('s3')
 
-
+# AWS lambda handler that pulls upstream API, wrap records, and writes directly into my S# bucket with timestamp partitioning.
+# event handler
 def handler(event, context):
     """
     Lambda handler for data ingestion.
