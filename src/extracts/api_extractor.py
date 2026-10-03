@@ -4,15 +4,18 @@ import logging
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
-
 import requests
+import boto3
 from faker import Faker
-
 from configuration.settings import RAW_DATA_DIR
 
+logger.logging.getLogger(__name__) 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 fake = Faker()
 
+class S3DataExtractor:
+    def __init__(self,raw_bucket:str=None, processed_bucket:str=None): 
+        self.s3 = boto3.client("s3") 
 
 class OrderExtractor:
     """
