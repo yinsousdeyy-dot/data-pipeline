@@ -16,7 +16,34 @@ fake = Faker()
 class S3DataExtractor:
     def __init__(self,raw_bucket:str=None, processed_bucket:str=None): 
         self.s3 = boto3.client("s3") 
+        self.raw_bucket = raw_bucket or os.environ.get("RAW_BUCKET_NAME")
+        self.processed_bucket= processed_bucket or os.environ.get("PROCESSED_BUCKET_NAME")
 
+    def fetch_latest_raw_order( self, prefix: str = " raw/" ) -> list:
+        # this fetches and merges recent JSON payloads from s3 raw storage.
+        response= self.s3.list_objects_v2(Bucket=self.raw_bucket, Prefix = prefix )
+        contents = response.get("Contents", [])
+        if not contents:
+            logger.warning(" NO objects found in s3://%s/%s", self.raw_bucket, prefix)
+            return []
+
+        # Sort to retrieve the most recent file
+        latest_file = sorted(contents , key= lambda x:x ["LastModified"] , reverse= True)[0]
+        logging.info ("Pulling latest raw payload: %s", latest_file["Key"])
+
+        obj = self.s3.get_object(Bucket=self.raw_bucket, Key=latest_file["Key"])
+        return json.loads(obj["Body"].read().decode('utf-8')) # utf-8 is getting 128bit
+    def push_quarantined_records(self, quarantined_data: list, key: str = 'processed/quarantined_orders.json'):
+        # pushes records failing schema validation to the s3 quarantine location.
+        if not quarantined_data: 
+            return
+        logger.warning("Quarantining %d records to s3://%s/%s", len(quarantined_data), self.processed_bucket , key )
+        self.s3.put_object( 
+            Bucket=self.processed_bucket,
+            Key = key,
+            Body= json.dumps(quarantined_data, indent=2) ,
+            ContentType= "application/json" 
+        
 class OrderExtractor:
     """
     Handles extracting order records from REST endpoints or synthetic generation.
