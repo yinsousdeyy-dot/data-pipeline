@@ -7,6 +7,8 @@
 # - Security & Monitoring (IAM)
 ############################################
 
+# using pessimistic constraint operator (often called the "version drift" or "operator")
+# like version >=5.0 but not 6.0
 terraform {
   required_version = ">= 1.0"
   required_providers {
