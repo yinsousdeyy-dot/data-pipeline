@@ -10,9 +10,8 @@ The pipeline is organized into three main stages:
 - Transformation: validate records, normalize email and status fields, remove duplicates, and quarantine invalid data
 - Loading: write clean data to PostgreSQL using `INSERT ... ON CONFLICT DO UPDATE`
 
-This project is designed to be easy to understand, test, and extend for learning and portfolio use.
-
 ## Project Architectural system
+using serverless for learning tool, while actually it's best default for a data pipelin when expected to grow in volume, frequency, or complexicity. I have my perfectly reasonable to use serverless-style patterns to understand the architecture before moving into a more durable operational setup.
 
 <img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/daef68d7-77d9-4200-bb7e-f2e3cbcf2bb4" />
 
