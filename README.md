@@ -11,7 +11,7 @@ The pipeline is organized into three main stages:
 - Loading: write clean data to PostgreSQL using `INSERT ... ON CONFLICT DO UPDATE`
 
 ## Project Architectural system
-using serverless for learning tool, while actually it's best default for a data pipelin when expected to grow in volume, frequency, or complexicity. I have my perfectly reasonable to use serverless-style patterns to understand the architecture before moving into a more durable operational setup.
+using serverless for learning tool, while actually it's not that best default for a data pipelin when expected to grow in volume, frequency, or complexicity. I have my perfectly reasonable to use serverless-style patterns to understand the architecture before moving into a more durable operational setup.
 
 <img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/daef68d7-77d9-4200-bb7e-f2e3cbcf2bb4" />
 
